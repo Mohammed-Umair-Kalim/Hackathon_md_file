@@ -226,5 +226,4 @@ Best for: Rapid deployment or students with weak laptops.
 
 ---
 
-This Markdown file is structured with headings, bullet points, links, and tables, making it ideal for online documentation or course outline presentation. Let me know if you'd like to make any modifications!
 ```
