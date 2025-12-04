@@ -178,5 +178,53 @@ This course is technically demanding. It sits at the intersection of three heavy
 **The "Digital Twin" Workstation** (Required per Student)
 
 - **GPU**: NVIDIA RTX 4070 Ti (12GB VRAM) or higher.
-- **CPU**: Intel Core
+- **CPU**: Intel Core i7 (13th Gen+) or AMD Ryzen 9.
+- **RAM**: 64 GB DDR5 (32 GB is the absolute minimum).
+- **OS**: Ubuntu 22.04 LTS.
+
+**The "Physical AI" Edge Kit**
+
+- **The Brain**: NVIDIA Jetson Orin Nano (8GB) or Orin NX (16GB).
+- **The Eyes**: Intel RealSense D435i or D455.
+- **The Inner Ear**: USB IMU (BNO055).
+- **Voice Interface**: ReSpeaker USB Microphone/Speaker array.
+
+### Summary of Architecture
+
+| Component        | Hardware                                      | Function                                      |
+|------------------|-----------------------------------------------|-----------------------------------------------|
+| **Sim Rig**      | PC with RTX 4080 + Ubuntu 22.04               | Runs Isaac Sim, Gazebo, Unity, and trains LLM/VLA models. |
+| **Edge Brain**   | Jetson Orin Nano                              | Runs the "Inference" stack. Students deploy their code here. |
+| **Sensors**      | RealSense Camera + Lidar                      | Connected to the Jetson to feed real-world data to the AI. |
+| **Actuator**     | Unitree Go2 or G1 (Shared)                    | Receives motor commands from the Jetson.      |
+
+If you do not have access to RTX-enabled workstations, we must restructure the course to rely entirely on cloud-based instances (like AWS RoboMaker or NVIDIA's cloud delivery for Omniverse), though this introduces significant latency and cost complexity.
+
+### Option 2: High OpEx - The "Ether" Lab (Cloud-Native)
+
+Best for: Rapid deployment or students with weak laptops.
+
+1. **Cloud Workstations (AWS/Azure)**:
+    - Instance Type: AWS g5.2xlarge (A10G GPU, 24GB VRAM) or g6e.xlarge.
+    - Instance cost: ~$1.50/hour.
+    - Total Cloud Bill: ~$205 per quarter.
+
+2. **Local "Bridge" Hardware**:
+    - Jetson Kit: $700 (One-time purchase).
+    - Robot: Unitree Go2 Standard ~$3,000.
+
+### The Economy Jetson Student Kit
+
+| Component        | Model                             | Price (Approx.)  | Notes                             |
+|------------------|-----------------------------------|------------------|-----------------------------------|
+| **The Brain**    | NVIDIA Jetson Orin Nano (8GB)     | $249             | Capable of 40 TOPS.               |
+| **The Eyes**     | Intel RealSense D435i             | $349             | Includes IMU (essential for SLAM).|
+| **The Ears**     | ReSpeaker USB Mic Array v2.0      | $69              | Far-field microphone for voice commands. |
+| **Wi-Fi**        | (Included in Dev Kit)             | $0               | The new "Super" kit includes the Wi-Fi module pre-installed. |
+| **Power/Misc**   | SD Card (128GB) + Jumper Wires    | $30              | High-endurance microSD card required. |
+| **TOTAL**        |                                   | ~$700 per kit    |                                   |
+
+---
+
+This Markdown file is structured with headings, bullet points, links, and tables, making it ideal for online documentation or course outline presentation. Let me know if you'd like to make any modifications!
 ```
