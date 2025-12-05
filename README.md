@@ -1,6 +1,5 @@
 Here's the content you requested in Markdown format:
 
-```markdown
 # Hackathon I: Physical AI & Humanoid Robotics Textbook
 
 ## Hackathon I: Create a Textbook for Teaching Physical AI & Humanoid Robotics Course
@@ -225,5 +224,3 @@ Best for: Rapid deployment or students with weak laptops.
 | **TOTAL**        |                                   | ~$700 per kit    |                                   |
 
 ---
-
-```
